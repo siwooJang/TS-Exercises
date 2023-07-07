@@ -17,12 +17,14 @@ let data:Restaurant = {
 
 const App:React.FC = () => {
   const [myRestaurant,setMyRestaurant] = useState<Restaurant>(data)
+  
   const changeAddress = (address:Address) => {
     setMyRestaurant({...myRestaurant,address:address})
   }
+
   return (
     <div className="App">
-      <Store info={myRestaurant}/>
+      <Store info={myRestaurant} changeAddress={changeAddress} />
     </div>
   );
 }
