@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import './App.css';
 import Store from './Store';
 import {Address,Restaurant} from "./model/restaurant"
+import BestMenu from './BestMenu';
 
 
 let data:Restaurant = {
@@ -25,6 +26,7 @@ const App:React.FC = () => {
   return (
     <div className="App">
       <Store info={myRestaurant} changeAddress={changeAddress} />
+      <BestMenu name="Bpizza" category="pizza" price={1000} />
     </div>
   );
 }
